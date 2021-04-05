@@ -45,4 +45,5 @@
                 - while loop to to ensure uniqueness
     - increase encounter
     - increase capture
+    - Pokemon in the DOM
 

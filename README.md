@@ -7,3 +7,41 @@
 5) Is there some state we need to initialize?
 6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events.
 7) Think about how to validate each of your steps
+
+###HTML
+1. Radio buttons for 3 Pokemon
+    - label, input, img
+        - each input has type="radio", same name
+2. Button to catch Pokemon
+    - button
+3. Rounds/Number of Pokemon caught
+    - div or p
+4. Display of Pokedex
+    - results page
+        - Pokemon, encounters, captures
+
+###States
+- Encounters
+- Captures
+- Rounds
+
+###Events
+- onLoad
+    - generate 3 pokemon
+
+- onClick
+    - generate 3 new Pokemon
+    - increment encounter state
+    - increment capture state
+    - check capture state
+        - if 10 captures, redirect
+
+###Functions
+    - get, set to localStorage
+    - generate 3 pokemon
+        - Array with 3 indexes
+            - Math.random
+                - while loop to to ensure uniqueness
+    - increase encounter
+    - increase capture
+

@@ -95,7 +95,7 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
+@keyframes pulse {
     20% {
       transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
     }
@@ -113,3 +113,10 @@ footer {
     }
 
   }
+
+img {
+      width: 200px;
+  }
+
+  
+

@@ -1,4 +1,4 @@
-import { findById } from './utils';
+import { findById } from './utils.js';
 
 
 const POKEDEX = 'POKEDEX';
@@ -12,11 +12,11 @@ export function getPokedex() {
 
 export function setPokedex(parsedPokedex) {
     const stringyPokedex = JSON.stringify(parsedPokedex);
-    localStorage.setItem(stringyPokedex);
+    localStorage.setItem(POKEDEX, stringyPokedex);
 }
 
 export function encounterPokemon(pokemon) {
-    const pokedex = getPokedex;
+    const pokedex = getPokedex();
     const matchingPokemon = findById(pokedex, pokemon.pokemon);
     if (matchingPokemon) {
         matchingPokemon.encounter++;

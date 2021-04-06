@@ -30,3 +30,4 @@ export function generateThreePokemon() {
 
     return [poke1, poke2, poke3];
 }
+

@@ -80,7 +80,8 @@ header img {
 }
 
 p {
-    margin: 20px;
+    margin: 10px;
+    text-align: center;
 }
   
 footer {
@@ -110,3 +111,9 @@ input {
 #catch-button {
     width: 100px;
 }
+
+#wild-pokemon {
+    display: flex;
+    flex-direction: row;
+}
+

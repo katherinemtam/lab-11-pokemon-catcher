@@ -19,7 +19,9 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-image: url("https://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png?imageOpt=1&fit=bounds&width=2163");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 main {
@@ -62,7 +64,7 @@ footer {
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -72,7 +74,7 @@ h2 {
 
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
-    width: 400px;
+    width: 500px;
 }
 
 header img {
@@ -82,6 +84,8 @@ header img {
 p {
     margin: 10px;
     text-align: center;
+    font-weight: bold;
+    font-size: larger;
 }
   
 footer {
@@ -96,12 +100,12 @@ footer {
 }
 
 img {
-      width: 200px;
+      width: 300px;
       margin: 20px;
   }
 
 input:checked + img {
-    box-shadow: 2px 2px 10px 2px blue;
+    filter: drop-shadow(5px 5px 5px hsl(180, 50%, 50%));
 }
 
 input {
@@ -117,3 +121,10 @@ input {
     flex-direction: row;
 }
 
+
+#instructions {
+    background-color: hsla(209, 75%, 49%, 0.808);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}

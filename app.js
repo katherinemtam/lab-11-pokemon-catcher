@@ -4,7 +4,6 @@ import { findById, findPokemonByName } from './utils.js';
 
 const catchButton = document.querySelector('#catch-button');
 const pokemonCaught = document.querySelector('#pokemon-caught');
-const pokedex = getPokedex();
 
 function createPokemonDOM() {
     const poke1Radio = document.querySelector('#poke1-radio');
@@ -33,7 +32,10 @@ function createPokemonDOM() {
     poke2Radio.value = threePokemon[1].pokemon;
     poke3Radio.value = threePokemon[2].pokemon;
 
+    const pokedex = getPokedex();
+
     const matchingPokemon1 = findById(pokedex, poke1Radio.value);
+
     if (matchingPokemon1) {
         poke1Encountered.textContent = matchingPokemon1.encountered;
         poke1Captured.textContent = matchingPokemon1.captured;

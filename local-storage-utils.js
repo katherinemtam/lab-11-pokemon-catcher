@@ -1,6 +1,5 @@
 import { findById } from './utils.js';
 
-
 const POKEDEX = 'POKEDEX';
 
 export function getPokedex() {

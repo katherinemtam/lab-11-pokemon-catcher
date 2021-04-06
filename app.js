@@ -1,4 +1,8 @@
 import { generateThreePokemon } from './data-utils.js';
+import { capturePokemon } from './local-storage-utils.js';
+import { findPokemonByName } from './utils.js';
+
+const catchButton = document.querySelector('#catch-button');
 
 function createPokemonDOM() {
     const poke1Label = document.querySelector('#poke1-label');
@@ -29,3 +33,10 @@ function createPokemonDOM() {
 }
 
 createPokemonDOM();
+
+catchButton.addEventListener('click', () => {
+    const selectedPokemon = document.querySelector('input:checked');
+    const pokemonValue = findPokemonByName(selectedPokemon.value);
+    capturePokemon(pokemonValue);
+    createPokemonDOM();
+});

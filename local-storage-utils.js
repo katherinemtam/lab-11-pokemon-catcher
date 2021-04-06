@@ -19,7 +19,7 @@ export function encounterPokemon(pokemon) {
     const pokedex = getPokedex();
     const matchingPokemon = findById(pokedex, pokemon.pokemon);
     if (matchingPokemon) {
-        matchingPokemon.encounter++;
+        matchingPokemon.encountered++;
     } else {
         const newPokemon = {
             pokemon: pokemon.pokemon,
@@ -35,7 +35,7 @@ export function encounterPokemon(pokemon) {
 export function capturePokemon(pokemon) {
     const pokedex = getPokedex();
     const matchingPokemon = findById(pokedex, pokemon.pokemon);
-    matchingPokemon.capture++;
+    matchingPokemon.captured++;
     setPokedex(pokedex);
     return pokedex;
 }

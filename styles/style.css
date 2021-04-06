@@ -72,6 +72,8 @@ h2 {
 
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
+    width: 400px;
+    margin: 50px;
 }
 
 header img {
@@ -93,7 +95,7 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
+@keyframes pulse {
     20% {
       transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
     }
@@ -111,3 +113,12 @@ footer {
     }
 
   }
+
+img {
+      width: 200px;
+  }
+
+input:checked + img {
+    box-shadow: 2px 2px 10px 2px blue;
+}
+

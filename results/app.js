@@ -6,6 +6,7 @@ const table = document.querySelector('#table');
 const pokedex = getPokedex();
 
 playAgain.addEventListener('click', () => {
+    localStorage.clear();
     window.location = '../index.html';
 });
 

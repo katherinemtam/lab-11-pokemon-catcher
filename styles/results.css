@@ -116,9 +116,16 @@ footer {
 
 table {
     border: 1px black solid;
-    
+    border-radius: 20px;;
+    width: 400px;
 }
 
 td {
     text-align: center;
 }
+
+thead {
+    font-weight: bold
+    ;
+}
+

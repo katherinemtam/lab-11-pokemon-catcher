@@ -80,7 +80,7 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin: 20px;
 }
   
 footer {
@@ -96,9 +96,17 @@ footer {
 
 img {
       width: 200px;
+      margin: 20px;
   }
 
 input:checked + img {
     box-shadow: 2px 2px 10px 2px blue;
 }
 
+input {
+    display: none;
+}
+
+#catch-button {
+    width: 100px;
+}

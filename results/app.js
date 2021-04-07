@@ -26,8 +26,8 @@ for (let pokemon of pokedex) {
 }
 
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, { // eslint-disable-line
+var ctx = document.getElementById('resultsChart').getContext('2d');
+var resultsChart = new Chart(ctx, { // eslint-disable-line
     type: 'bar',
     data: {
         labels: pokemonNames,
@@ -58,6 +58,98 @@ var myChart = new Chart(ctx, { // eslint-disable-line
         scales: {
             y: {
                 beginAtZero: true
+            }
+        }
+    }
+});
+
+
+var ctx2 = document.getElementById('doughnutChart').getContext('2d');
+var doughnutChart = new Chart(ctx2, { // eslint-disable-line
+    type: 'doughnut',
+    data: {
+        labels: pokemonNames,
+        datasets: [{
+            label: 'Encountered',
+            data: encountered,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'red',
+                'orange',
+                'yellow',
+                'green',
+                'blue',
+                'indigo',
+                'violet',
+            ],
+            hoverOffset: 4
+        },
+        {
+            label: 'Captured',
+            data: captured,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'lightblue',
+                'pink',
+                'orange',
+                'lightgreen',
+                'purple',
+                'red',
+            ],
+            hoverOffset: 4
+        }]
+    }
+});
+
+var ctx3 = document.getElementById('polarChart').getContext('2d');
+var polarChart = new Chart(ctx3, { // eslint-disable-line
+    data: {
+        labels: pokemonNames,
+        datasets: [{
+            label: 'Encountered',
+            data: encountered,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(75, 192, 192)',
+                'rgb(255, 205, 86)',
+                'rgb(201, 203, 207)',
+                'rgb(54, 162, 235)',
+                'lightblue',
+                'pink',
+                'orange',
+                'lightgreen',
+                'purple',
+                'red',
+            ]
+        },
+        {
+            label: 'Captured',
+            data: captured,
+            backgroundColor: [
+                'red',
+                'orange',
+                'yellow',
+                'green',
+                'blue',
+                'indigo',
+                'violet',
+            ]
+        }]
+    },
+    type: 'polarArea',
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Polar Area Chart'
             }
         }
     }

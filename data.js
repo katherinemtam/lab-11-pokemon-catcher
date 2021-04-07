@@ -32,7 +32,7 @@ export default [
         'shape_id': 8,
         'shape': 'quadruped',
         'pokebase': 'bulbasaur',
-        'pokedex': 'http://www.pokemon.com/us/pokedex/bulbasaur'
+        'pokedex': 'http://www.pokemon.com/us/pokedex/bulbasaur',
     },
     {
         '_id': '5cef3501ef6005a77cd4fd19',

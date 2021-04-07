@@ -1,7 +1,5 @@
-// import pokeData from '../data.js';
 import { getPokedex } from '../local-storage-utils.js';
 import { createTableRow } from './utils.js';
-// import { findById } from '../utils.js';
 
 const playAgain = document.querySelector('#play-again-button');
 const table = document.querySelector('#table');
@@ -66,29 +64,93 @@ var resultsChart = new Chart(ctx, { // eslint-disable-line
 });
 
 
-// const pokemonType1 = [];
-// const pokemonType2 = [];
+var ctx2 = document.getElementById('doughnutChart').getContext('2d');
+var doughnutChart = new Chart(ctx2, { // eslint-disable-line
+    type: 'doughnut',
+    data: {
+        labels: pokemonNames,
+        datasets: [{
+            label: 'Encountered',
+            data: encountered,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'red',
+                'orange',
+                'yellow',
+                'green',
+                'blue',
+                'indigo',
+                'violet',
+            ],
+            hoverOffset: 4
+        },
+        {
+            label: 'Captured',
+            data: captured,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'lightblue',
+                'pink',
+                'orange',
+                'lightgreen',
+                'purple',
+                'red',
+            ],
+            hoverOffset: 4
+        }]
+    }
+});
 
-// for (let pokemon of pokedex) {
-//     const matchingPokemon = findById(pokeData, pokemon.pokemon);
-//     pokemonType1.push(matchingPokemon.type_1);
-//     pokemonType2.push(matchingPokemon.type_2);
-// }
-
-// var ctx2 = document.getElementById('typeChart').getContext('2d');
-// var typeChart = new Chart(ctx2, { // eslint-disable-line
-//     type: 'doughnut',
-//     data: {
-//         labels: pokemonType1,
-//         datasets: [{
-//             label: 'Pokemon Types',
-//             data: pokemonType1,
-//             backgroundColor: [
-//                 'rgb(255, 99, 132)',
-//                 'rgb(54, 162, 235)',
-//                 'rgb(255, 205, 86)'
-//             ],
-//             hoverOffset: 4
-//         }]
-//     }
-// });
+var ctx3 = document.getElementById('polarChart').getContext('2d');
+var polarChart = new Chart(ctx3, { // eslint-disable-line
+    data: {
+        labels: pokemonNames,
+        datasets: [{
+            label: 'Encountered',
+            data: encountered,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(75, 192, 192)',
+                'rgb(255, 205, 86)',
+                'rgb(201, 203, 207)',
+                'rgb(54, 162, 235)',
+                'lightblue',
+                'pink',
+                'orange',
+                'lightgreen',
+                'purple',
+                'red',
+            ]
+        },
+        {
+            label: 'Captured',
+            data: captured,
+            backgroundColor: [
+                'red',
+                'orange',
+                'yellow',
+                'green',
+                'blue',
+                'indigo',
+                'violet',
+            ]
+        }]
+    },
+    type: 'polarArea',
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Polar Area Chart'
+            }
+        }
+    }
+});

@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('https://i.pinimg.com/originals/43/77/4f/43774fb3b7eecc24a4ae700260b206f0.jpg');
 }
 
 main {
@@ -118,6 +118,8 @@ table {
     border: 1px black solid;
     border-radius: 20px;;
     width: 400px;
+    box-shadow: 2px 2px 10px 2px gray;
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.74))
 }
 
 td {
@@ -129,3 +131,15 @@ thead {
     ;
 }
 
+canvas {
+    border: 1px black solid;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px 2px gray;
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.74))
+}
+
+button {
+    margin: 20px;
+}
